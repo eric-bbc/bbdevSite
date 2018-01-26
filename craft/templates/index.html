@@ -63,6 +63,18 @@
 
     {% endfor %}
 
+    <div class="col small-up-one-third client-links-wrapper">
+        {% for asset in entry.clientLinks2 %}
+          <p class="client-link">{{ asset.clientLink }}</p>
+        {% endfor %}
+    </div>
+
+    <div class="col small-up-one-third client-links-wrapper">
+        {% for asset in entry.clientLinks3 %}
+          <p class="client-link">{{ asset.clientLink }}</p>
+        {% endfor %}
+    </div>
+
   </div>
 
 

@@ -32,17 +32,27 @@ body {
 
 .caption-wrapper {
   text-align: left;
+
+  .client-caption {
+    font-size: 20px;
+    padding-top: 6px;
+    margin: 0;
+  }
+  .client-subcaption {
+    font-family: 'GTWalsheimProLight';
+    margin: 0;
+  }
 }
 
 .client-links-wrapper {
     font-size: 44.5px;
     text-align: left;
     width: 100%;
-    margin-top: 12px;
+    margin-top: 16px;
 
     .client-link {
       width: 50%;
-      padding-left: 50px;
+      padding-left: 14px;
       margin: 34px;
     }
 }
