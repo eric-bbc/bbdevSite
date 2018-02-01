@@ -24,59 +24,52 @@
 
   {% set asset = entry.heroImage.first() %}
   {% if asset %}
-  <div class="splash-container" style="background-image:url( {{ asset.url }} );">
-        <!-- <img src="{{ asset.url }}" alt=""/> -->
-  </div>
+  <div class="splash-container" style="background-image:url( {{ asset.url }} );"></div>
   {% endif %}
 
-<div class="see-more">
-  <p>See More</p>
-</div>
-
+  <div class="see-more">
+    <p>See More</p>
+  </div>
 
   <div class="grid client-section">
 
-    <div class="col small-up-one-third client-links-wrapper">
-        {% for asset in entry.clientLinks %}
-          <p class="client-link">{{ asset.clientLink }}</p>
-        {% endfor %}
-    </div>
+    {% for block in entry.clientSection1 %}
+      <div class="col small-up-one-third">
+        <ul>
+        {% if block.type == "clientLinks" %}
+          <li class="client-link">{{block.clientLink}}</li>
+        </ul>
+        {% elseif block.type == "clientImageSection" %}
 
-    {% for asset in entry.clientSection %}
+          <div class="client-set-container">
 
-      <div class="col small-up-one-third client-set">
+            {% set image = block.image.first() %}
+              {% if image %}
+                <img class="client-image" src="{{ image.url }}" alt=""/>
+              {% endif %}
 
-        <div class="client-set-container">
+                <div class="caption-wrapper">
+                  <p class="client-caption">{{ block.caption }}</p>
+                  <p class="client-subcaption">{{ block.subcaption }}</p>
+                </div>
 
-          {% set image = asset.image.first() %}
-          {% if image %}
-            <img class="client-image" src="{{ image.url }}" alt=""/>
-          {% endif %}
+            </div>
 
-          <div class="caption-wrapper">
-            <p class="client-caption">{{ asset.caption }}</p>
-            <p class="client-subcaption">{{ asset.subcaption }}</p>
-          </div>
 
-        </div>
+        {% endif %}
+
       </div>
 
-    {% endfor %}
+      {% endfor %}
 
-    <div class="col small-up-one-third client-links-wrapper">
-        {% for asset in entry.clientLinks2 %}
-          <p class="client-link">{{ asset.clientLink }}</p>
-        {% endfor %}
     </div>
 
-    <div class="col small-up-one-third client-links-wrapper">
-        {% for asset in entry.clientLinks3 %}
-          <p class="client-link">{{ asset.clientLink }}</p>
-        {% endfor %}
+    <div class="grid client-section">
+
+      {% for block in entry.clientSection2 %}
+
+      {% endfor %}
+
     </div>
-
-  </div>
-
-
 
 {% endblock %}
