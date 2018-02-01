@@ -31,29 +31,32 @@
     <p>See More</p>
   </div>
 
-  <div class="grid client-section">
 
-    {% for block in entry.clientSection1 %}
+  <div class="client-section-container">
+    <div class="grid client-section">
+
+      {% for block in entry.clientSection1 %}
       <div class="col small-up-one-third">
-        <ul>
+
         {% if block.type == "clientLinks" %}
+        <ul>
           <li class="client-link">{{block.clientLink}}</li>
         </ul>
         {% elseif block.type == "clientImageSection" %}
 
-          <div class="client-set-container">
+        <div class="client-set-container">
 
-            {% set image = block.image.first() %}
-              {% if image %}
-                <img class="client-image" src="{{ image.url }}" alt=""/>
-              {% endif %}
+          {% set image = block.image.first() %}
+          {% if image %}
+          <img class="client-image" src="{{ image.url }}" alt=""/>
+          {% endif %}
 
-                <div class="caption-wrapper">
-                  <p class="client-caption">{{ block.caption }}</p>
-                  <p class="client-subcaption">{{ block.subcaption }}</p>
-                </div>
+          <div class="caption-wrapper">
+            <p class="client-caption">{{ block.caption }}</p>
+            <p class="client-subcaption">{{ block.subcaption }}</p>
+          </div>
 
-            </div>
+        </div>
 
 
         {% endif %}
@@ -63,13 +66,90 @@
       {% endfor %}
 
     </div>
+  </div>
 
-    <div class="grid client-section">
+    <div class=" client-section section-two">
+        <div class="col small-up-one-half">
+          {% for block in entry.clientSection2 %}
+            {% if block.type == "clientImageLarge" %}
+              {% set image = block.image.first() %}
+                {% if image %}
+                  <img class="client-image-large" src="{{ image.url }}" alt=""/>
+                {% endif %}
 
-      {% for block in entry.clientSection2 %}
+                <div class="caption-wrapper">
+                  <p class="client-caption">{{ block.caption }}</p>
+                  <p class="client-subcaption">{{ block.subcaption }}</p>
+                </div>
 
-      {% endfor %}
+                {% endif %}
+          {% endfor %}
+        </div>
+
+          <div class="col small-up-one-half">
+
+            <ul class='client-links-wrapper'>
+              {% for block in entry.clientSection2 %}
+              {% if block.type == "clientLinks" %}
+
+              <li class="client-link">{{block.clientLink}}</li>
+
+            </ul>
+            {% endif %}
+            {% endfor %}
+          </div>
+
+
+        {% for block in entry.clientSection2 %}
+              {% if block.type == "clientImageSmall" %}
+
+                {% set image = block.image.first() %}
+                  {% if image %}
+                    <img class="small" src="{{ image.url }}" alt=""/>
+                  {% endif %}
+
+                  <div class="caption-wrapper">
+                    <p class="client-caption">{{ block.caption }}</p>
+                    <p class="client-subcaption">{{ block.subcaption }}</p>
+                  </div>
+
+              {% endif %}
+          {% endfor %}
 
     </div>
+
+    <div class=" client-section section-three">
+
+        {% for block in entry.clientSection3 %}
+          <div class="col small-up-one-third">
+
+            {% if block.type == "clientLinks" %}
+            <ul>
+              <li class="client-link">{{block.clientLink}}</li>
+            </ul>
+            {% elseif block.type == "clientImageSection" %}
+
+              <div class="client-set-container">
+
+                {% set image = block.image.first() %}
+                  {% if image %}
+                    <img class="client-image" src="{{ image.url }}" alt=""/>
+                  {% endif %}
+
+                    <div class="caption-wrapper">
+                      <p class="client-caption">{{ block.caption }}</p>
+                      <p class="client-subcaption">{{ block.subcaption }}</p>
+                    </div>
+
+                </div>
+
+
+            {% endif %}
+
+          </div>
+
+          {% endfor %}
+      </div>
+
 
 {% endblock %}
