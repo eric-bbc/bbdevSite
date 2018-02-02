@@ -13,12 +13,19 @@ body {
   top: 0;
 }
 
-.client-section-container {
+.grid{
+  margin: 8rem;
+}
+.client-section-one-container {
   margin-top: 68rem;
 }
 
+.client-links-col{
+  height:250px;
+}
+
 .client-image-large {
-  width: 60rem;
+  width: 100%;
 }
 
 .client-image {
@@ -41,10 +48,9 @@ body {
 }
 
 .client-links-wrapper {
-    font-size: 44.5px;
+    font-size: 38px;
     text-align: left;
-    width: 100%;
-    margin-top: 16px;
+    margin-top: 0;
 
     .client-link {
       width: 50%;
