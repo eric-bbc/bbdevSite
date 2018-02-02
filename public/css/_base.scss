@@ -13,58 +13,13 @@ body {
   top: 0;
 }
 
-.grid{
-  margin: 8rem;
-}
-.client-section-one-container {
-  margin-top: 68rem;
-}
-
-.client-links-col{
-  height:250px;
-}
-
-.client-image-large {
-  width: 100%;
-}
-
-.client-image {
-  width: 400px;
-  max-height: 420px;
-}
-
-.caption-wrapper {
-  text-align: left;
-
-  .client-caption {
-    font-size: 20px;
-    padding-top: 6px;
-    margin: 0;
-  }
-  .client-subcaption {
-    font-family: 'GTWalsheimProLight';
-    margin: 0;
-  }
-}
-
-.client-links-wrapper {
-    font-size: 38px;
-    text-align: left;
-    margin-top: 0;
-
-    .client-link {
-      width: 50%;
-      list-style-type: none;
-    }
-}
-
 .see-more {
   font-family: 'GTWalsheimProLight';
   font-size: 16px;
   letter-spacing: 0.1px;
   color: #231f20;
   position: absolute;
-  top: 60rem;
+  top: 59rem;
   left: 0;
   right: 0;
   background-color: white;
@@ -77,4 +32,86 @@ body {
     border-bottom: 1px solid;
     padding-bottom: 2px;
   }
+}
+
+
+.grid{
+  margin-left: 8rem;
+
+  .client-section-one-container {
+    margin-top: 63rem;
+  }
+
+  ul.client-links-wrapper {
+    font-size: 3rem;
+    text-align: left;
+    margin: 7rem 0 0 0;
+    padding: 0;
+
+    .client-link {
+      width: 50%;
+      padding-bottom: 18px;
+      list-style-type: none;
+    }
+  }
+
+  .client-section-item{
+    height: 25rem;
+    margin-top: 7rem;
+
+    .client-image {
+      width: 70%;
+    }
+
+  }
+  .caption-wrapper {
+    text-align: left;
+
+    .client-caption {
+      font-size: 20px;
+      padding-top: 6px;
+      margin: 0;
+    }
+    .client-subcaption {
+      font-family: 'GTWalsheimProLight';
+      margin: 0;
+    }
+  }
+
+  .client-section-left-large{
+    width: 57%;
+    margin-top: 5rem;
+
+    .client-section-image-large {
+      width: 100%;
+    }
+  }
+
+  .client-section-right-group{
+    width: 43%;
+
+    .client-links-wrapper-section-two{
+      margin-left: 11rem;
+      width: 100%;
+    }
+
+    .client-image-small-right{
+      margin-left: 11rem;
+      width: 97%;
+        .image-small{
+          width: 60%;
+        }
+    }
+  }
+
+  .client-links-wrapper-section-three{
+    margin: 0 !important;
+  }
+
+}
+
+.footer{
+  margin-top: 8rem;
+  margin-left: 5rem;
+  font-size: x-large;
 }
