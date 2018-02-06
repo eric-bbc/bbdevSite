@@ -1,0 +1,30 @@
+{% if entry.type == 'caseStudy'%}
+
+  {% for block in entry.caseStudy %}
+    {% switch block.type %}
+
+      {% case 'text' %}
+        {{ block.text }}
+      {% case 'image' %}
+
+      <figure class="{{block.align}}">
+        {% if block.align == 'fullWidth' %}
+          {% set transform = 'blogImage_fullWidth' %}
+        {% else %}
+          {% set transform = 'blogImage_float' %}
+        {% endif %}
+
+        <img src="{{ image.getUrl(transform) }}" width="{{ image.getWidth(transform) }}" height="{{ image.getHeight(transform) }}" alt="{{ image.title }}">
+
+        {% if block.caption %}
+          <figcaption>{{ block.caption }}</figcaption>
+        {% endif %}
+      </figure>
+
+      {% case 'quote' %}
+
+    {% endswitch %}
+
+  {% endfor %}
+
+{% endif %}

@@ -37,9 +37,12 @@ body {
 
 .grid{
   margin-left: 8rem;
+  padding: 0 4px;
 
   .client-section-one-container {
     margin-top: 63rem;
+    max-width: 81%;
+    padding: 0 150px;
   }
 
   ul.client-links-wrapper {
@@ -78,17 +81,22 @@ body {
     }
   }
 
+  .client-section-two-container{
+    padding: 0 150px;
+  }
   .client-section-left-large{
-    width: 57%;
+    width: 53%;
     margin-top: 5rem;
 
     .client-section-image-large {
-      width: 100%;
+      width: 103%;
+      margin-top: 5rem;
     }
   }
 
   .client-section-right-group{
     width: 43%;
+    margin-top: 3rem;
 
     .client-links-wrapper-section-two{
       margin-left: 11rem;
@@ -99,7 +107,8 @@ body {
       margin-left: 11rem;
       width: 97%;
         .image-small{
-          width: 60%;
+          width: 52%;
+          margin-top: 4rem;
         }
     }
   }
@@ -108,10 +117,27 @@ body {
     margin: 0 !important;
   }
 
+  .client-section-three-container{
+    max-width: 81%;
+    padding: 0 150px;
+  }
+
 }
 
 .footer{
   margin-top: 8rem;
-  margin-left: 5rem;
+  margin-left: 20rem;
   font-size: x-large;
+  letter-spacing: 1px;
+  display: -webkit-inline-box;
+  .address, .contact, .email, .phone{
+    padding-right: 5rem;
+  }
+
+  .contact, .email, .instagram{
+    text-decoration: underline;
+    color: black;
+    display: block;
+    margin-top: 1.5rem;
+  }
 }

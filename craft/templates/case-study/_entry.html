@@ -1,0 +1,10 @@
+{% extends "_layout" %}
+
+{% block content %}
+
+{% set asset = entry.heroImage.first() %}
+  {% if asset %}
+    <div class="hero-image-container" style="background-image:url( {{ asset.url }} );"></div>
+  {% endif %}
+
+{% endblock %}
