@@ -9,12 +9,20 @@
 
           {% case 'headerText' %}
 
-            {{ block.headerText }}
+            <h1>{{ block.headerText }}</h1>
 
           {% case 'description' %}
 
             {{ block.description }}
-            
+
+            <p class="see-more-nav">see more ></p>
+
+          {% case 'heroImage'%}
+          {% set image = block.heroImage.first() %}
+            {% if image %}
+              <img src="{{ image.url }}" alt=""/>
+            {% endif %}
+
         {% endswitch %}
 
       {% endfor %}
