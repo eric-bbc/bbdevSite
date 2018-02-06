@@ -2,9 +2,23 @@
 
 {% block content %}
 
-{% set asset = entry.heroImage.first() %}
-  {% if asset %}
-    <div class="hero-image-container" style="background-image:url( {{ asset.url }} );"></div>
+  {% if entry.type == 'caseStudy'%}
+
+      {% for block in entry.heroModule %}
+        {% switch block.type %}
+
+          {% case 'headerText' %}
+
+            {{ block.headerText }}
+
+          {% case 'description' %}
+
+            {{ block.description }}
+            
+        {% endswitch %}
+
+      {% endfor %}
+
   {% endif %}
 
 {% endblock %}
