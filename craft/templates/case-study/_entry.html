@@ -2,9 +2,14 @@
 
 {% block content %}
 
+  <div class="top-title-line"> --------------- </div>
+
   {% if entry.type == 'caseStudy'%}
 
+    <div class="hero-module-container">
+
       {% for block in entry.heroModule %}
+
         {% switch block.type %}
 
           {% case 'headerText' %}
@@ -18,14 +23,109 @@
             <p class="see-more-nav">see more ></p>
 
           {% case 'heroImage'%}
+
           {% set image = block.heroImage.first() %}
             {% if image %}
               <img src="{{ image.url }}" alt=""/>
             {% endif %}
 
+          {% endswitch %}
+
+        {% endfor %}
+
+      </div>
+
+
+      <div class="see-more-nav-container">
+
+        {% for block in entry.viewMoreOverlay %}
+
+          {% switch block.type %}
+
+            {% case 'description' %}
+
+              <div class="description">{{ block.description }}</div>
+
+            <p class="services"> Services </p>
+
+            {% case 'servicesList' %}
+
+              <ul class="services-list">
+                <li>{{ block.servicesList}}</li>
+              </ul>
+
+            {% case 'clientSiteLink' %}
+
+              <p class="client-site-link"> {{ block.clientSiteLink }}</p>
+
+          {% endswitch %}
+
+        {% endfor %}
+
+    </div>
+
+    <div class="large-asset-container">
+
+      {% set image = entry.largeImageVideo.first() %}
+        {% if image %}
+          <img src="{{ image.url }}" alt=""/>
+        {% endif %}
+
+    </div>
+
+    <div class="module-section-two">
+
+      {% for block in entry.moduleTwo %}
+
+        {% switch block.type %}
+
+          {% case 'image' %}
+
+            {% set image = block.image.first() %}
+              {% if image %}
+                <img src="{{ image.url }}" alt=""/>
+              {% endif %}
+
+          {% case 'descriptionLarge' %}
+
+            <p class="description-large">{{block.descriptionLarge}}</p>
+
+          {% case 'descriptionSmall' %}
+
+            <p class="description-small">{{block.descriptionSmall}}</p>
+
         {% endswitch %}
 
       {% endfor %}
+
+    </div>
+
+    <div class="module-section-three">
+
+      {% for block in entry.moduleThree %}
+
+        {% switch block.type %}
+
+          {% case 'description' %}
+
+            <p class="description-large">{{block.description}}</p>
+
+          {% case 'descriptionSmall' %}
+
+            <p class="description-small">{{block.descriptionSmall}}</p>
+
+          {% case 'image' %}
+
+            {% set image = block.image.first() %}
+              {% if image %}
+                <img src="{{ image.url }}" alt=""/>
+              {% endif %}
+
+        {% endswitch %}
+
+      {% endfor %}
+
+    </div>
 
   {% endif %}
 

@@ -1,3 +1,17 @@
 .hero-image-container {
   width: 100%;
 }
+
+.see-more-nav-container{
+  background-color: $color-black;
+    .description, .services{
+      color: $color-white;
+    }
+    .services-list{
+      color: $color-blue;
+      list-style-type: none;
+    }
+    .client-site-link{
+      color: $color-white;
+    }
+}
