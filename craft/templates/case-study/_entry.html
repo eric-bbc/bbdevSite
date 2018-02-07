@@ -127,6 +127,21 @@
 
     </div>
 
+    <div class="gallery">
+
+      <div class="royalSlider rsDefault">
+        {% for block in entry.royalSlider %}
+          {% if block.type == "image" %}
+            {% set image = block.image.first() %}
+              {% if image %}
+                  <img class="rsImg" src="{{ image.url }}" alt=""/>
+              {% endif %}
+          {% endif %}
+        {% endfor %}
+      </div>
+
+    </div>
+
   {% endif %}
 
 {% endblock %}
