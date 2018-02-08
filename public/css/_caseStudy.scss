@@ -44,3 +44,11 @@
 .view-more-open {
     @include transform(translateX(0));
   }
+
+
+.large-asset-container{
+  border: 150px solid $color-light-grey;
+  .large-image{
+    width:100%;
+  }
+}
