@@ -37,12 +37,12 @@
 			{% endblock %}
 		</main>
 
-		<footer id="footer">
-
-      {{ contact.email }}
-      {{ contact.phone }}
-
-
+		<footer class="footer">
+      <p class="address">{{ contact.address }}</p>
+      <a href="/contact" class="contact">Work With Us</a>
+      <a href="mailto:info@blackandblackcreative.com" class="email">{{ contact.email }}</a>
+      <p class="phone">{{ contact.phone }}</p>
+      <a href="https://www.instagram.com/blackandblackcreative/" class="instagram">Instagram</a>
 		</footer>
 	</div>
     <script src="/js/vendor/jquery-3.0.0.js"></script>
