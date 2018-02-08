@@ -4055,12 +4055,44 @@ large-up-push-one-third
 .hero-image-container {
   width: 100%; }
 
-.see-more-nav-container {
+.view-more-overlay {
+  z-index: 400;
+  background-color: rgba(0, 0, 0, 0.6); }
+  body.view-more-open .view-more-overlay {
+    display: block; }
+
+.view-more {
+  -webkit-transform: translateX(101%);
+  -khtml-transform: translateX(101%);
+  -moz-transform: translateX(101%);
+  -ms-transform: translateX(101%);
+  -o-transform: translateX(101%);
+  transform: translateX(101%);
+  position: fixed;
+  top: 80px;
+  bottom: 0;
+  right: 0;
+  z-index: 400;
+  width: 50%;
+  padding: 0 40px;
   background-color: #000; }
-  .see-more-nav-container .description, .see-more-nav-container .services {
+  .view-more .description, .view-more .services {
     color: #fff; }
-  .see-more-nav-container .services-list {
+  .view-more .services-list {
     color: #A4CCFF;
     list-style-type: none; }
-  .see-more-nav-container .client-site-link {
+  .view-more .client-site-link {
     color: #fff; }
+
+.view-more-open {
+  -webkit-transform: translateX(0);
+  -khtml-transform: translateX(0);
+  -moz-transform: translateX(0);
+  -ms-transform: translateX(0);
+  -o-transform: translateX(0);
+  transform: translateX(0); }
+
+.desktop-view-more-trigger {
+  text-align: right;
+  margin-top: 3rem;
+  margin-right: 3rem; }

@@ -36,8 +36,9 @@
       </div>
 
 
-      <div class="see-more-nav-container">
+      <div class="view-more-overlay fullscreen-overlay display-none cursor-pointer js-body-remove-class" data-body-class="view-more-open"></div>
 
+      <div class="view-more">
         {% for block in entry.viewMoreOverlay %}
 
           {% switch block.type %}
@@ -140,6 +141,16 @@
         {% endfor %}
       </div>
 
+    </div>
+
+    <div class="footer">
+      {% for block in entry.footer %}
+        <p class="address">{{ block.address }}</p>
+        <a href="/contact" class="contact">{{ block.contact }}</a>
+        <a href="mailto:info@blackandblackcreative.com" class="email">{{ block.email }}</a>
+        <p class="phone">{{ block.phone }}</p>
+        <a href="https://www.instagram.com/blackandblackcreative/" class="instagram">{{ block.instagram }}</a>
+      {% endfor %}
     </div>
 
   {% endif %}

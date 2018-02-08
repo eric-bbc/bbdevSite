@@ -2,8 +2,33 @@
   width: 100%;
 }
 
-.see-more-nav-container{
+.view-more-overlay{
+
+  z-index:list-get($z-index, 'mini-cart');
+  background-color: rgba(#000, 0.6);
+
+  body.view-more-open & {
+    display: block;
+  }
+
+}
+
+.view-more{
+
+  @include transform(translateX(101%));
+
+  position: fixed;
+  top: 80px;
+  bottom: 0;
+  right: 0;
+  z-index: list-get($z-index, 'mini-cart');
+  width: 50%;
+  padding: 0 40px;
+
   background-color: $color-black;
+
+  @include transition();
+
     .description, .services{
       color: $color-white;
     }
@@ -15,3 +40,7 @@
       color: $color-white;
     }
 }
+
+.view-more-open {
+    @include transform(translateX(0));
+  }
