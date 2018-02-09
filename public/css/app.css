@@ -4054,17 +4054,23 @@ large-up-push-one-third
 
 .hero-module-container {
   width: 100%; }
+  .hero-module-container .header {
+    font-size: 84px;
+    padding: 0;
+    margin: 0; }
+  .hero-module-container .description {
+    font-family: 'GTWalsheimProLight'; }
+  .hero-module-container .see-more-nav {
+    color: #CACBCC;
+    margin-bottom: 3rem; }
+  .hero-module-container .hero-image {
+    width: 100%; }
 
 .view-more-overlay {
   z-index: 400;
   background-color: rgba(0, 0, 0, 0.6); }
   body.view-more-open .view-more-overlay {
     display: block; }
-
-.header {
-  font-size: 100px;
-  padding: 0;
-  margin: 0; }
 
 .view-more {
   -webkit-transform: translateX(101%);

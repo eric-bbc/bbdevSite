@@ -1,7 +1,11 @@
 {% extends "_layout" %}
 {% block content %}
 
-  <div class="line"> --------------- </div>
+  <svg height="35" width="100">
+    <g fill="none" stroke="#C7C8CA">
+      <path stroke-width="2" d="M5 20 l215 0" />
+    </g>
+  </svg>
 
   {% if entry.type == 'caseStudy'%}
 
@@ -11,12 +15,12 @@
           {% case 'headerText' %}
             <h1 class="header">{{ block.headerText }}</h1>
           {% case 'description' %}
-            {{ block.description }}
-            <p class="see-more-nav">see more ></p>
+            <div class="description">{{ block.description }}</div>
+            <p class="see-more-nav">View more ></p>
           {% case 'heroImage'%}
           {% set image = block.heroImage.first() %}
             {% if image %}
-              <img src="{{ image.url }}" alt=""/>
+              <img class="hero-image" src="{{ image.url }}" alt=""/>
             {% endif %}
         {% endswitch %}
       {% endfor %}
@@ -74,7 +78,11 @@
 
     <div class="module-section-three">
         <div class="header-text">
-          <div class="line"> --------------- </div>
+          <svg height="80" width="100">
+            <g fill="none" stroke="grey">
+              <path stroke-width="2" d="M5 20 l215 0" />
+            </g>
+          </svg>
           {% for block in entry.moduleThree %}
             {% if block.type == "description" %}
               <p class="description-large">{{block.description}}</p>
