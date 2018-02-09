@@ -1,7 +1,7 @@
 {% extends "_layout" %}
 {% block content %}
 
-  <div class="top-title-line"> --------------- </div>
+  <div class="line"> --------------- </div>
 
   {% if entry.type == 'caseStudy'%}
 
@@ -47,43 +47,81 @@
         {% endif %}
     </div>
 
-    <div class="module-section-two">
-      <div class="grid">
-        {% for block in entry.moduleTwo %}
-          {% switch block.type %}
-            {% case 'image' %}
-              <div class="col small-up-one-half">
-                {% set image = block.image.first() %}
-                  {% if image %}
-                    <img src="{{ image.url }}" alt=""/>
-                  {% endif %}
-              </div>
-              <div class="col small-up-one-half">
-                {% case 'descriptionLarge' %}
-                  <p class="description-large">{{block.descriptionLarge}}</p>
-                {% case 'descriptionSmall' %}
-                  <p class="description-small">{{block.descriptionSmall}}</p>
-              </div>
-          {% endswitch %}
-        {% endfor %}
+    <div class="grid">
+      <div class="module-section-two">
+        <div class="col small-up-one-half">
+          {% for block in entry.moduleTwo %}
+            {% if block.type == "image" %}
+              {% set image = block.image.first() %}
+                {% if image %}
+                  <img class="section-two-image" src="{{ image.url }}" alt=""/>
+                {% endif %}
+            {% endif %}
+          {% endfor %}
+        </div>
+        <div class="col small-up-one-half">
+          {% for block in entry.moduleTwo %}
+            {% if block.type == "descriptionLarge" %}
+              <p class="description-large">{{block.descriptionLarge}}</p>
+            {% endif %}
+            {% if block.type == "descriptionSmall" %}
+              <p class="description-small">{{block.descriptionSmall}}</p>
+            {% endif %}
+          {% endfor %}
+        </div>
       </div>
     </div>
 
     <div class="module-section-three">
+      <div class="line"> --------------- </div>
       {% for block in entry.moduleThree %}
-        {% switch block.type %}
-          {% case 'description' %}
-            <p class="description-large">{{block.description}}</p>
-          {% case 'descriptionSmall' %}
-            <p class="description-small">{{block.descriptionSmall}}</p>
-          {% case 'image' %}
-            {% set image = block.image.first() %}
-              {% if image %}
-                <img src="{{ image.url }}" alt=""/>
-              {% endif %}
-        {% endswitch %}
+        {% if block.type == "description" %}
+          <p class="description-large">{{block.description}}</p>
+        {% endif %}
+        {% if block.type == "descriptionSmall" %}
+          <p class="description-small">{{block.descriptionSmall}}</p>
+        {% endif %}
       {% endfor %}
+
+        <div class="grid">
+          <div class="col small-up-one-half">
+            {% for block in entry.moduleThree %}
+              {% if (block.type == "image") and (block.alignment == "left") %}
+                {% for option in block.display.options %}
+                  {% if option.selected == "mobile" %}
+                    <div class="align--{{ block.alignment }} display--{{option}}">
+                      {% set image = block.imageUrl.first() %}
+                        {% if image %}
+                            <img src="{{ image.url }}" alt=""/>
+                        {% endif %}
+                    </div>
+                  {% endif %}
+                {% endfor %}
+              {% endif %}
+            {% endfor %}
+          </div>
+          <div class="col small-up-one-half">
+            {% for block in entry.moduleThree %}
+              {% if (block.type == "image") and (block.alignment == "right") %}
+                {% for option in block.display.options %}
+                  {% if option.selected == "mobile" %}
+                    <div class="align--{{block.alignment}} display--{{option}}">
+                      {% set image = block.imageUrl.first() %}
+                        {% if image %}
+                            <img src="{{ image.url }}" alt=""/>
+                        {% endif %}
+                    </div>
+                  {% endif %}
+                {% endfor %}
+              {% endif %}
+            {% endfor %}
+          </div>
+      </div>
+
+
+
     </div>
+
 
     <div class="gallery">
       <div class="royalSlider rsDefault">

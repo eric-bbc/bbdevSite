@@ -52,3 +52,29 @@
     width:100%;
   }
 }
+
+.module-section-two{
+  .section-two-image{
+    width: 500px;
+  }
+}
+
+.module-section-three{
+  .description-large{
+    font-size: xx-large;
+  }
+  .description-small{
+    width:20rem;
+  }
+}
+
+.align--right{
+  float:right;
+}
+
+.display--framed{
+  border: 50px solid $color-medium-grey;
+  margin-bottom: 4rem;
+  width: 79%;
+  height: 428px;
+}
