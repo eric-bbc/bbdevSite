@@ -3,8 +3,10 @@
 /////////////////////////////////////////
 
 $(document).ready(function($) {
-  $(".royalSlider").royalSlider({
-        keyboardNavEnabled: true
+  $(".casestudy-slider").royalSlider({
+        keyboardNavEnabled: true,
+        imageScaleMode:'none',
+        autoScaleSlider: true
     });
 });
 

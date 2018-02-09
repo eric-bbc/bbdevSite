@@ -4052,7 +4052,7 @@ large-up-push-one-third
   .large-x-large-push-eleven-twelfths {
     left: 91.6666666667%; } }
 
-.hero-image-container {
+.hero-module-container {
   width: 100%; }
 
 .view-more-overlay {
@@ -4060,6 +4060,11 @@ large-up-push-one-third
   background-color: rgba(0, 0, 0, 0.6); }
   body.view-more-open .view-more-overlay {
     display: block; }
+
+.header {
+  font-size: 100px;
+  padding: 0;
+  margin: 0; }
 
 .view-more {
   -webkit-transform: translateX(101%);
@@ -4092,28 +4097,63 @@ large-up-push-one-third
   -o-transform: translateX(0);
   transform: translateX(0); }
 
-.large-asset-container {
-  border: 150px solid #F6F6F6; }
-  .large-asset-container .large-image {
-    width: 100%; }
+.large-asset-container .large-image {
+  max-width: 90%;
+  padding: 5%;
+  background: #F6F6F6; }
 
 .module-section-two .section-two-image {
-  width: 500px; }
+  max-width: 75%;
+  margin-top: 4rem; }
 
-.module-section-three .description-large {
-  font-size: xx-large; }
+.module-section-two .description-large {
+  font-size: -webkit-xxx-large;
+  width: 50%;
+  margin-top: 4rem; }
 
-.module-section-three .description-small {
-  width: 20rem; }
+.module-section-two .description-small {
+  font-family: 'GTWalsheimProLight';
+  width: 50%; }
 
-.align--right {
-  float: right; }
+.module-section-three .header-text {
+  margin-left: 8rem; }
+  .module-section-three .header-text .description-large {
+    font-size: xx-large; }
+  .module-section-three .header-text .description-small {
+    width: 20rem;
+    font-family: 'GTWalsheimProLight'; }
 
-.display--framed {
-  border: 50px solid #C7C8CA;
-  margin-bottom: 4rem;
-  width: 79%;
-  height: 428px; }
+.align--left {
+  margin-top: 6rem;
+  margin-bottom: 5rem; }
+
+.display--framed .frame {
+  max-width: 98%;
+  padding: 4%;
+  background: #C7C8CA; }
+
+.display--mobile {
+  float: left;
+  margin-left: 4rem;
+  margin-top: 8rem;
+  margin-right: 2rem; }
+
+.display--mobile:last-child {
+  margin-top: 18rem; }
+
+.casestudy-slider {
+  background: #FFF;
+  width: 100%; }
+  .casestudy-slider .rsSlide, .casestudy-slider .rsOverflow {
+    background: #FFF; }
+  .casestudy-slider .rsNav {
+    display: none; }
+  .casestudy-slider .rsBullets {
+    display: none; }
+  .casestudy-slider .img {
+    width: 100%;
+    height: auto;
+    margin: 10px auto; }
 
 .desktop-view-more-trigger {
   text-align: right;

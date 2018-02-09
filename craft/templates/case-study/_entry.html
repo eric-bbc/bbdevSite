@@ -9,7 +9,7 @@
       {% for block in entry.heroModule %}
         {% switch block.type %}
           {% case 'headerText' %}
-            <h1>{{ block.headerText }}</h1>
+            <h1 class="header">{{ block.headerText }}</h1>
           {% case 'description' %}
             {{ block.description }}
             <p class="see-more-nav">see more ></p>
@@ -73,16 +73,17 @@
     </div>
 
     <div class="module-section-three">
-      <div class="line"> --------------- </div>
-      {% for block in entry.moduleThree %}
-        {% if block.type == "description" %}
-          <p class="description-large">{{block.description}}</p>
-        {% endif %}
-        {% if block.type == "descriptionSmall" %}
-          <p class="description-small">{{block.descriptionSmall}}</p>
-        {% endif %}
-      {% endfor %}
-
+        <div class="header-text">
+          <div class="line"> --------------- </div>
+          {% for block in entry.moduleThree %}
+            {% if block.type == "description" %}
+              <p class="description-large">{{block.description}}</p>
+            {% endif %}
+            {% if block.type == "descriptionSmall" %}
+              <p class="description-small">{{block.descriptionSmall}}</p>
+            {% endif %}
+          {% endfor %}
+        </div>
         <div class="grid">
           <div class="col small-up-one-half">
             {% for block in entry.moduleThree %}
@@ -92,7 +93,7 @@
                     <div class="align--{{ block.alignment }} display--{{option}}">
                       {% set image = block.imageUrl.first() %}
                         {% if image %}
-                            <img src="{{ image.url }}" alt=""/>
+                            <img class="frame" src="{{ image.url }}" alt=""/>
                         {% endif %}
                     </div>
                   {% endif %}
@@ -108,7 +109,7 @@
                     <div class="align--{{block.alignment}} display--{{option}}">
                       {% set image = block.imageUrl.first() %}
                         {% if image %}
-                            <img src="{{ image.url }}" alt=""/>
+                            <img class="frame" src="{{ image.url }}" alt=""/>
                         {% endif %}
                     </div>
                   {% endif %}
@@ -117,14 +118,10 @@
             {% endfor %}
           </div>
       </div>
-
-
-
     </div>
 
-
     <div class="gallery">
-      <div class="royalSlider rsDefault">
+      <div class="royalSlider rsDefault casestudy-slider">
         {% for block in entry.royalSlider %}
           {% if block.type == "image" %}
             {% set image = block.image.first() %}
