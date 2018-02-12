@@ -4052,8 +4052,13 @@ large-up-push-one-third
   .large-x-large-push-eleven-twelfths {
     left: 91.6666666667%; } }
 
+.header-svg {
+  margin-left: 3rem; }
+
 .hero-module-container {
   width: 100%; }
+  .hero-module-container .header-text-container {
+    margin-left: 3rem; }
   .hero-module-container .header {
     font-size: 84px;
     padding: 0;
@@ -4073,6 +4078,8 @@ large-up-push-one-third
     display: block; }
 
 .view-more {
+  font-family: 'GTWalsheimProLight';
+  color: #fff;
   -webkit-transform: translateX(101%);
   -khtml-transform: translateX(101%);
   -moz-transform: translateX(101%);
@@ -4087,13 +4094,20 @@ large-up-push-one-third
   width: 50%;
   padding: 0 40px;
   background-color: #000; }
-  .view-more .description, .view-more .services {
-    color: #fff; }
+  .view-more .description {
+    margin-top: 4rem;
+    margin-left: 2rem;
+    width: 50%;
+    font-size: large; }
+  .view-more .services {
+    font-size: x-large;
+    margin-left: 2rem;
+    margin-top: 3rem; }
   .view-more .services-list {
-    color: #A4CCFF;
     list-style-type: none; }
   .view-more .client-site-link {
-    color: #fff; }
+    margin-left: 2rem;
+    margin-top: 6rem; }
 
 .view-more-open {
   -webkit-transform: translateX(0);
@@ -4112,19 +4126,21 @@ large-up-push-one-third
   max-width: 75%;
   margin-top: 4rem; }
 
-.module-section-two .description-large {
-  font-size: -webkit-xxx-large;
-  width: 50%;
-  margin-top: 4rem; }
-
-.module-section-two .description-small {
-  font-family: 'GTWalsheimProLight';
-  width: 50%; }
+.module-section-two .description-block {
+  margin-top: 12rem; }
+  .module-section-two .description-block .description-large {
+    font-size: -webkit-xxx-large;
+    width: 50%;
+    margin-top: 4rem; }
+  .module-section-two .description-block .description-small {
+    font-family: 'GTWalsheimProLight';
+    width: 50%; }
 
 .module-section-three .header-text {
-  margin-left: 8rem; }
+  margin-left: 8rem;
+  margin-top: 6rem; }
   .module-section-three .header-text .description-large {
-    font-size: xx-large; }
+    font-size: -webkit-xxx-large; }
   .module-section-three .header-text .description-small {
     width: 20rem;
     font-family: 'GTWalsheimProLight'; }
@@ -4146,6 +4162,9 @@ large-up-push-one-third
 
 .display--mobile:last-child {
   margin-top: 18rem; }
+
+.gallery {
+  margin-top: 9rem; }
 
 .casestudy-slider {
   background: #FFF;

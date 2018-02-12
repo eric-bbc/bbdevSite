@@ -1,5 +1,12 @@
+.header-svg{
+  margin-left: 3rem;
+}
+
 .hero-module-container {
   width: 100%;
+  .header-text-container{
+    margin-left: 3rem;
+  }
   .header{
     font-size: 84px;
     padding: 0;
@@ -29,6 +36,9 @@
 }
 
 .view-more{
+  font-family: 'GTWalsheimProLight';
+  color: $color-white;
+
 
   @include transform(translateX(101%));
 
@@ -44,15 +54,23 @@
 
   @include transition();
 
-    .description, .services{
-      color: $color-white;
+    .description{
+      margin-top: 4rem;
+      margin-left: 2rem;
+      width: 50%;
+      font-size: large;
+    }
+    .services{
+      font-size: x-large;
+      margin-left: 2rem;
+      margin-top: 3rem;
     }
     .services-list{
-      color: $color-blue;
       list-style-type: none;
     }
     .client-site-link{
-      color: $color-white;
+      margin-left: 2rem;
+      margin-top: 6rem;
     }
 }
 
@@ -73,22 +91,27 @@
     max-width: 75%;
     margin-top: 4rem;
   }
-  .description-large{
-    font-size: -webkit-xxx-large;
-    width: 50%;
-    margin-top: 4rem;
-  }
-  .description-small{
-    font-family: 'GTWalsheimProLight';
-    width: 50%;
+  .description-block{
+    margin-top: 12rem;
+    .description-large{
+      font-size: -webkit-xxx-large;
+      width: 50%;
+      margin-top: 4rem;
+    }
+    .description-small{
+      font-family: 'GTWalsheimProLight';
+      width: 50%;
+    }
   }
 }
 
 .module-section-three{
   .header-text{
     margin-left: 8rem;
+    margin-top: 6rem;
+
     .description-large{
-      font-size: xx-large;
+      font-size: -webkit-xxx-large;
     }
     .description-small{
       width: 20rem;
@@ -119,6 +142,10 @@
 
 .display--mobile:last-child {
   margin-top: 18rem;
+}
+
+.gallery{
+  margin-top: 9rem;
 }
 
 .casestudy-slider{
