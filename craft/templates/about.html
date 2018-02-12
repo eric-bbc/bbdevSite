@@ -2,6 +2,12 @@
 
 {% block content %}
 
-<h1> i am the aboot page </h1>
+  {% if entry.type == 'about'%}
+    {% for block in entry.sectionOne %}
+      {% if block.type == "description" %}
+        <p class="description">{{ block.description }}</p>
+      {% endif %}
+    {% endfor %}
+  {% endif %}
 
 {% endblock %}
