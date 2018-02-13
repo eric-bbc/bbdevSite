@@ -30,3 +30,6 @@ $(document).ready(function($) {
 $('.desktop-view-more-trigger').on('click', function() {
   $('.view-more').toggleClass('view-more-open')
 })
+
+$("#clock4").clock({"format":"24","calendar":"false"});
+$("#destroyclock4").click(function(){ $("#clock4").clock("destroy") });

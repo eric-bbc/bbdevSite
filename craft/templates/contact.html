@@ -2,6 +2,25 @@
 
 {% block content %}
 
-<h1> i am the contact page </h1>
+<h1> Interested in working with us? </h1>
+
+<a class="form-link" href="#">Get Started</a>
+
+<h1 class="contact"> Contact </h1>
+
+<footer class="contact-footer">
+  <p class="address">{{ contact.address }}</p>
+  <p class="phone">{{ contact.phone }}</p>
+  <p><a href="mailto:info@blackandblackcreative.com" class="email">{{ contact.email }}</a></p>
+  <p><a href="/contact" class="contact">Join Us</a></p>
+  <p><a href="https://www.instagram.com/blackandblackcreative/" class="instagram">Instagram</a></p>
+</footer>
+
+</pre>
+</div>
+<hr style="clear:both;" />
+<div style="clear:both;">
+<div id="clock4">This div will be turned into a dynamic clock</div>
+<pre style="clear:both;">
 
 {% endblock %}
