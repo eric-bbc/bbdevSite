@@ -3,11 +3,55 @@
 {% block content %}
 
   {% if entry.type == 'about'%}
+
     {% for block in entry.sectionOne %}
       {% if block.type == "description" %}
         <p class="description">{{ block.description }}</p>
       {% endif %}
     {% endfor %}
+
+    <div class="shopify-logo-wrapper">
+      {% for block in entry.sectionOne %}
+        {% if block.type == "shopifyLogo" %}
+          {% for image in block.shopifyLogo %}
+            {% if image %}
+              <img class="shopify-logo" src="{{ image.url }}" alt=""/>
+            {% endif %}
+          {% endfor %}
+        {% endif %}
+      {% endfor %}
+    </div>
+
+    <br/>
+
+    <div class="grid detail-section-wrapper-grid">
+        <div class="detail-section-wrapper">
+          {% for block in entry.sectionTwo %}
+              {% if block.type == "detailSection" %}
+              <div class="col small-up-one-third">
+                <h2 class="detail-header">{{block.header}}</h2>
+                <div class="detail-description">{{block.description}}</div>
+              </div>
+              {% endif %}
+          {% endfor %}
+        </div>
+    </div>
+
+    <div class="grid logos-wrapper-grid">
+      <div class="logos-wrapper">
+        {% for block in entry.sectionThree %}
+          {% if block.type == "logo" %}
+            {% set image = block.logo.first() %}
+              {% if image %}
+              <div class="col small-up-one-quarter flex-container logo-container">
+                <img class="company-logo" src="{{ image.url }}" alt=""/>
+              </div>
+              {% endif %}
+          {% endif %}
+        {% endfor %}
+      </div>
+    </div>
+
   {% endif %}
 
 {% endblock %}

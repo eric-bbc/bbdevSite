@@ -1,0 +1,52 @@
+body{
+  background-color: #000;
+}
+
+.description{
+  color: #FFF;
+  font-size: 169px;
+  margin-left: 5rem;
+}
+
+.shopify-logo-wrapper{
+  margin-left: 5rem;
+  position: absolute;
+  width: 100%;
+  .shopify-logo{
+    width: 12%;
+    padding-right: 6rem;
+    margin: auto;
+  }
+}
+
+.detail-section-wrapper-grid{
+  margin-left: 3rem;
+  .detail-section-wrapper{
+    color: #FFF;
+    margin-top: 9rem;
+    margin-left: 4rem;
+    .detail-header{
+      font-size: -webkit-xxx-large;
+      margin-bottom: 1rem;
+    }
+    .detail-description{
+      font-family: 'GTWalsheimProLight';
+      width: 76%;
+      margin-bottom: 4rem;
+    }
+  }
+}
+
+.logos-wrapper-grid{
+  margin-left: 3rem;
+  .logos-wrapper{
+    .company-logo{
+      width: 12rem;
+      margin: auto;
+    }
+    .logo-container{
+      height: 193px;
+      margin-top: 9rem;
+    }
+  }
+}
