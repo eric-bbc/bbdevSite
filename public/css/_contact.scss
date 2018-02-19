@@ -1,13 +1,5 @@
-body{
-  background-color: #000;
-}
 
-h1{
-  color: #fff;
-  font-size: 120px;
-  width: 42%;
-  margin-left: 9rem;
-}
+
 
 .form-link{
   font-family: 'GTWalsheimProLight';
@@ -49,54 +41,40 @@ h1{
     color: #fff;
 }
 
-ul {
-    width: 800px;
-    margin: 0 auto;
-    padding: 0px;
-    list-style: none;
-    text-align: center;
-}
-
-ul li {
-    display: inline;
-    font-size: 10em;
-    text-align: center;
-    font-family: 'BebasNeueRegular', Arial, Helvetica, sans-serif;
-    text-shadow: 0 0 5px #00c6ff;
-}
 
 
 
-/* Simple Animation */
-@-webkit-keyframes mymove {
-    0% {opacity: 1.0;
-    text-shadow: 0 0 20px #00c6ff;
-}
 
-50% {
-    opacity: 0;
-    text-shadow: none;
-}
-
-100% {
-    opacity: 1.0;
-    text-shadow: 0 0 20px #00c6ff;
-}
-}
-
-@-moz-keyframes mymove {
-    0% {
-        opacity: 1.0;
-        text-shadow: 0 0 20px #00c6ff;
-    }
-
-    50% {
-        opacity: 0;
-        text-shadow: none;
-    }
-
-    100% {
-        opacity: 1.0;
-        text-shadow: 0 0 20px #00c6ff;
-    };
-}
+// /* Simple Animation */
+// @-webkit-keyframes mymove {
+//     0% {opacity: 1.0;
+//     text-shadow: 0 0 20px #00c6ff;
+// }
+//
+// 50% {
+//     opacity: 0;
+//     text-shadow: none;
+// }
+//
+// 100% {
+//     opacity: 1.0;
+//     text-shadow: 0 0 20px #00c6ff;
+// }
+// }
+//
+// @-moz-keyframes mymove {
+//     0% {
+//         opacity: 1.0;
+//         text-shadow: 0 0 20px #00c6ff;
+//     }
+//
+//     50% {
+//         opacity: 0;
+//         text-shadow: none;
+//     }
+//
+//     100% {
+//         opacity: 1.0;
+//         text-shadow: 0 0 20px #00c6ff;
+//     };
+// }

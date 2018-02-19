@@ -68,88 +68,10 @@ body {
   background-color: #FFF;
   font-family: 'Bebas Neue'; }
 
-.splash-container {
-  width: 104%;
-  background-size: cover;
-  height: 100vh;
-  background-repeat: no-repeat;
-  position: absolute;
-  left: 0;
-  top: 0; }
-
-.see-more {
-  font-family: 'GTWalsheimProLight';
-  font-size: 16px;
-  letter-spacing: 0.1px;
-  color: #231f20;
-  position: absolute;
-  top: 59rem;
-  left: 0;
-  right: 0;
-  background-color: white;
-  width: 100vw;
-  padding: 15px;
-  text-align: center; }
-  .see-more p {
-    display: inline-block;
-    border-bottom: 1px solid;
-    padding-bottom: 2px; }
-
-.grid {
-  margin-left: 8rem;
-  padding: 0 4px; }
-  .grid .client-section-one-container {
-    margin-top: 63rem;
-    max-width: 81%;
-    padding: 0 150px; }
-  .grid ul.client-links-wrapper {
-    font-size: 3rem;
-    text-align: left;
-    margin: 7rem 0 0 0;
-    padding: 0; }
-    .grid ul.client-links-wrapper .client-link {
-      width: 50%;
-      padding-bottom: 18px;
-      list-style-type: none; }
-  .grid .client-section-item {
-    height: 25rem;
-    margin-top: 7rem; }
-    .grid .client-section-item .client-image {
-      width: 70%; }
-  .grid .caption-wrapper {
-    text-align: left; }
-    .grid .caption-wrapper .client-caption {
-      font-size: 20px;
-      padding-top: 6px;
-      margin: 0; }
-    .grid .caption-wrapper .client-subcaption {
-      font-family: 'GTWalsheimProLight';
-      margin: 0; }
-  .grid .client-section-two-container {
-    padding: 0 150px; }
-  .grid .client-section-left-large {
-    width: 53%;
-    margin-top: 5rem; }
-    .grid .client-section-left-large .client-section-image-large {
-      width: 103%;
-      margin-top: 5rem; }
-  .grid .client-section-right-group {
-    width: 43%;
-    margin-top: 3rem; }
-    .grid .client-section-right-group .client-links-wrapper-section-two {
-      margin-left: 11rem;
-      width: 100%; }
-    .grid .client-section-right-group .client-image-small-right {
-      margin-left: 11rem;
-      width: 97%; }
-      .grid .client-section-right-group .client-image-small-right .image-small {
-        width: 52%;
-        margin-top: 4rem; }
-  .grid .client-links-wrapper-section-three {
-    margin: 0 !important; }
-  .grid .client-section-three-container {
-    max-width: 81%;
-    padding: 0 150px; }
+h1 {
+  font-size: 120px;
+  width: 42%;
+  margin-left: 9rem; }
 
 .footer {
   margin-top: 8rem;
@@ -4060,11 +3982,12 @@ large-up-push-one-third
   .hero-module-container .header-text-container {
     margin-left: 3rem; }
   .hero-module-container .header {
-    font-size: 84px;
+    font-size: 6rem;
     padding: 0;
     margin: 0; }
   .hero-module-container .description {
-    font-family: 'GTWalsheimProLight'; }
+    font-family: 'GTWalsheimProLight';
+    font-size: 4rem; }
   .hero-module-container .see-more-nav {
     color: #CACBCC;
     margin-bottom: 3rem; }
@@ -4189,14 +4112,12 @@ large-up-push-one-third
   .desktop-view-more-trigger .ham-nav {
     width: 60px; }
 
-body {
-  background-color: #000; }
-
-.description {
-  color: #FFF;
-  font-size: 169px;
-  margin-left: 5rem;
-  margin-bottom: 5rem; }
+.about-page-container {
+  background: #000;
+  color: #000; }
+  .about-page-container .description {
+    margin-left: 5rem;
+    margin-bottom: 5rem; }
 
 .shopify-logo-wrapper {
   margin-left: 5rem;
@@ -4234,15 +4155,6 @@ body {
     height: 193px;
     margin-top: 9rem; }
 
-body {
-  background-color: #000; }
-
-h1 {
-  color: #fff;
-  font-size: 120px;
-  width: 42%;
-  margin-left: 9rem; }
-
 .form-link {
   font-family: 'GTWalsheimProLight';
   font-size: 50px;
@@ -4275,39 +4187,100 @@ h1 {
   border: 1px solid #333;
   color: #fff; }
 
-ul {
-  width: 800px;
-  margin: 0 auto;
-  padding: 0px;
-  list-style: none;
+.splash-container {
+  padding-bottom: 10rem; }
+
+.splash-image {
+  width: 100%;
+  background-size: cover;
+  height: 100%;
+  background-repeat: no-repeat;
+  position: absolute;
+  left: 0;
+  top: 0; }
+
+.see-more {
+  font-family: 'GTWalsheimProLight';
+  font-size: 16px;
+  letter-spacing: 0.1px;
+  color: #231f20;
+  position: absolute;
+  top: 59rem;
+  left: 0;
+  right: 0;
+  background-color: white;
+  width: 100vw;
+  padding: 15px;
   text-align: center; }
+  .see-more p {
+    display: inline-block;
+    border-bottom: 1px solid;
+    padding-bottom: 2px; }
 
-ul li {
-  display: inline;
-  font-size: 10em;
-  text-align: center;
-  font-family: 'BebasNeueRegular', Arial, Helvetica, sans-serif;
-  text-shadow: 0 0 5px #00c6ff; }
-
-/* Simple Animation */
-@-webkit-keyframes mymove {
-  0% {
-    opacity: 1.0;
-    text-shadow: 0 0 20px #00c6ff; }
-  50% {
-    opacity: 0;
-    text-shadow: none; }
-  100% {
-    opacity: 1.0;
-    text-shadow: 0 0 20px #00c6ff; } }
-
-@-moz-keyframes mymove {
-  0% {
-    opacity: 1.0;
-    text-shadow: 0 0 20px #00c6ff; }
-  50% {
-    opacity: 0;
-    text-shadow: none; }
-  100% {
-    opacity: 1.0;
-    text-shadow: 0 0 20px #00c6ff; } }
+.homepage-grid {
+  margin-left: 8rem;
+  padding: 0 4px; }
+  .homepage-grid .client-section-one-container {
+    margin-top: 63rem;
+    max-width: 81%;
+    padding: 0 150px; }
+    .homepage-grid .client-section-one-container:after {
+      content: " ";
+      display: block;
+      clear: both; }
+  .homepage-grid .client-links-wrapper {
+    font-size: 3rem;
+    text-align: left;
+    padding: 0;
+    margin-top: 0px; }
+    .homepage-grid .client-links-wrapper .client-link {
+      width: 100%;
+      padding-bottom: 18px;
+      list-style-type: none; }
+  .homepage-grid .client-section-item {
+    height: 25rem;
+    margin-top: 7rem; }
+    .homepage-grid .client-section-item .client-image {
+      width: 70%; }
+  .homepage-grid .caption-wrapper {
+    text-align: left; }
+    .homepage-grid .caption-wrapper .client-caption {
+      font-size: 20px;
+      padding-top: 6px;
+      margin: 0; }
+    .homepage-grid .caption-wrapper .client-subcaption {
+      font-family: 'GTWalsheimProLight';
+      margin: 0; }
+  .homepage-grid .client-section-two-container {
+    padding: 0 150px; }
+    .homepage-grid .client-section-two-container:after {
+      content: " ";
+      display: block;
+      clear: both; }
+  .homepage-grid .client-section-left-large {
+    width: 53%;
+    margin-top: 5rem; }
+    .homepage-grid .client-section-left-large .client-section-image-large {
+      width: 100%;
+      margin-top: 5rem; }
+  .homepage-grid .client-section-right-group {
+    width: 43%;
+    margin-top: 3rem; }
+    .homepage-grid .client-section-right-group .client-links-wrapper-section-two {
+      margin-left: 11rem;
+      width: 100%; }
+    .homepage-grid .client-section-right-group .client-image-small-right {
+      margin-left: 11rem;
+      width: 97%; }
+      .homepage-grid .client-section-right-group .client-image-small-right .image-small {
+        width: 52%;
+        margin-top: 4rem; }
+  .homepage-grid .client-links-wrapper-section-three {
+    margin: 0 !important; }
+  .homepage-grid .client-section-three-container {
+    max-width: 81%;
+    padding: 0 150px; }
+    .homepage-grid .client-section-three-container:after {
+      content: " ";
+      display: block;
+      clear: both; }

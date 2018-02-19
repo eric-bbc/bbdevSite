@@ -1,0 +1,124 @@
+{% set asset = entry.heroImage.first() %}
+
+{% if asset %}
+<div class="splash-container">
+  <div class="splash-image" style="background-image:url( {{ asset.url }} );"></div>
+
+</div>
+{% endif %}
+
+<!-- <div class="see-more">
+  <p>Expand / Collapse </p>
+</div> -->
+
+<!-- <div class="side-bar-overlay">
+  {% for block in entry.sidebar %}
+    {% if block.type =="work" %}
+      <div class="work">{{ block.work }}</div>
+    {% endif %}
+  {% endfor %}
+  {% for block in entry.sidebar %}
+    {% if block.type =="about" %}
+      <div class="about">{{ block.about }}</div>
+    {% endif %}
+  {% endfor %}
+  {% for block in entry.sidebar %}
+    {% if block.type =="contact" %}
+      <div class="contact"> {{ block.contact }}</p>
+    {% endif %}
+  {% endfor %}
+</div> -->
+
+<div class="grid homepage-grid">
+  <div class="client-section-one-container">
+    <div class="col small-up-one-third client-section-item">
+      <ul class="client-links-wrapper">
+        {% for block in entry.clientSection1 %}
+          {% if block.type == "clientLinks" %}
+            <li class="client-link">{{ block.clientLink }}</li>
+          {% endif %}
+        {% endfor %}
+      </ul>
+    </div>
+    {% for block in entry.clientSection1 %}
+      {% if block.type == "clientImageSection" %}
+        <div class="col small-up-one-third client-section-item">
+          {% set image = block.image.first() %}
+          {% if image %}
+            <img class="client-image" src="{{ image.url }}" alt=""/>
+          {% endif %}
+          <div class="caption-wrapper">
+            <p class="client-caption">{{ block.caption }}</p>
+            <p class="client-subcaption">{{ block.subcaption }}</p>
+          </div>
+        </div>
+      {% endif %}
+    {% endfor %}
+  </div>
+
+  <div class="client-section-two-container">
+    <div class="col client-section-left-large">
+      {% for block in entry.clientSection2 %}
+        {% if block.type == "clientImageLarge" %}
+          {% set image = block.image.first() %}
+            {% if image %}
+              <img class="client-section-image-large" src="{{ image.url }}" alt=""/>
+            {% endif %}
+            <div class="caption-wrapper">
+              <p class="client-caption">{{ block.caption }}</p>
+              <p class="client-subcaption">{{ block.subcaption }}</p>
+            </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+    <div class="col client-section-right-group">
+      <ul class="client-links-wrapper client-links-wrapper-section-two client-section-item">
+        {% for block in entry.clientSection2 %}
+          {% if block.type == "clientLinks" %}
+              <li class="client-link">{{ block.clientLink }}</li>
+          {% endif %}
+        {% endfor %}
+      </ul>
+      <div class="client-image-small-right">
+        {% for block in entry.clientSection2 %}
+          {% if block.type == "clientImageSmall" %}
+            {% set image = block.image.first() %}
+              {% if image %}
+                <img class="image-small" src="{{ image.url }}" alt=""/>
+              {% endif %}
+              <div class="caption-wrapper">
+                <p class="client-caption">{{ block.caption }}</p>
+                <p class="client-subcaption">{{ block.subcaption }}</p>
+              </div>
+          {% endif %}
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+
+  <div class="client-section-three-container">
+    {% for block in entry.clientSection3 %}
+      {% if block.type == "clientImageSection" %}
+        <div class="col small-up-one-third client-section-item">
+          {% set image = block.image.first() %}
+          {% if image %}
+            <img class="client-image" src="{{ image.url }}" alt=""/>
+          {% endif %}
+          <div class="caption-wrapper">
+            <p class="client-caption">{{ block.caption }}</p>
+            <p class="client-subcaption">{{ block.subcaption }}</p>
+          </div>
+        </div>
+      {% endif %}
+    {% endfor %}
+    <div class="col small-up-one-third client-section-item">
+      <ul class="client-links-wrapper client-links-wrapper-section-three">
+        {% for block in entry.clientSection3 %}
+          {% if block.type == "clientLinks" %}
+            <li class="client-link">{{ block.clientLink }}</li>
+          {% endif %}
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+</div>
